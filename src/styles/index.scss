@@ -13,5 +13,16 @@ html, body {
 
 #main-content {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .building-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .building-tile {
+    margin: 12px;
+  }
 }

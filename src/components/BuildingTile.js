@@ -9,11 +9,16 @@ class BuildingTile extends React.Component {
     const data = this.props.data;
 
     return <div className="building-tile">
-      <div className="background">
-        <img src={data.photos.hero}/>
+      <div className="building-tile-image-wrapper">
+        <div className="background">
+          <img src={data.photos.hero}/>
+        </div>
+        <div className="hover-info">
+          <div className="building-name">{data.description}</div>
+        </div>
       </div>
-      <div className="hover-info">
-        <div className="building-name">{data.name}</div>
+      <div className="bottom-tile-info">
+        {data.name}
       </div>
     </div>;
   }
