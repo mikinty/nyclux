@@ -1,6 +1,9 @@
 import React from "react";
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import { APARTMENTS } from "./data";
 import BuildingTile from "./components/BuildingTile";
+import BuildingPage from "./pages/BuildingPage";
 
 /**
  * This is the highest level of the web app.
@@ -13,14 +16,23 @@ class App extends React.Component {
       if (i + 1 < building_data.length) {
         collection.push(
           <div className="building-row" key={i}>
-            <BuildingTile data={building_data[i][1]} />
-            <BuildingTile data={building_data[i + 1][1]} />
+            <BuildingTile
+              data={building_data[i][1]}
+              url={building_data[i][0]}
+            />
+            <BuildingTile
+              data={building_data[i + 1][1]}
+              url={building_data[i + 1][0]}
+            />
           </div>
         );
       } else {
         collection.push(
           <div className="building-row" key={i}>
-            <BuildingTile data={building_data[i][1]} />
+            <BuildingTile
+              data={building_data[i][1]}
+              url={building_data[i][0]}
+            />
           </div>
         );
       }
@@ -28,12 +40,21 @@ class App extends React.Component {
 
     return (
       <div id="App">
-        <div id="header">
-          <div id="left-corner"></div>
-          <div id="title">NYCLUX</div>
-          <div id="menu" />
-        </div>
-        <div id="main-content">{collection}</div>
+        <Router>
+          <Switch>
+            <Route path="/building/:name">
+              <BuildingPage />
+            </Route>
+            <Route path="/">
+              <div id="header">
+                <div id="left-corner"></div>
+                <div id="title">NYCLUX</div>
+                <div id="menu" />
+              </div>
+              <div id="main-content">{collection}</div>
+            </Route>
+          </Switch>
+        </Router>
       </div>
     );
   }
