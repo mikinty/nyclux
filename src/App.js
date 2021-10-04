@@ -2,6 +2,7 @@ import React from "react";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { APARTMENTS } from "./data";
+import AboutPage from "./pages/AboutPage";
 import BuildingTile from "./components/BuildingTile";
 import BuildingPage from "./pages/BuildingPage";
 
@@ -42,6 +43,9 @@ class App extends React.Component {
       <div id="App">
         <Router>
           <Switch>
+            <Route path="/about">
+              <AboutPage />
+            </Route>
             <Route path="/building/:name">
               <BuildingPage />
             </Route>

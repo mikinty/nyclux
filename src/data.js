@@ -26,9 +26,9 @@ export const APARTMENTS = {
       gym: {
         description:
           "Chic gym with dark flooring, segmented into 3 areas, weight training, cardio, and yoga. The weight room can be crowded, but the cardio room is very accommodating, and the yoga room is good for people to stretch or meditate.",
-        dumbbells: true,
         num_squat_rack: 1,
         num_treadmill: 10,
+        dumbbells: true,
         yoga_room: true,
         towels: true,
         size: 0,
@@ -145,4 +145,11 @@ export const APARTMENTS = {
       hero: HERO_7DEY,
     },
   },
+  "AMERICANCOPPER" : {
+    name: "American Copper Buildings",
+    website: "https://americancopper.nyc",
+    photos: {
+      hero: null,
+    },
+  }
 };
