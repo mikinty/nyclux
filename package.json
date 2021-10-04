@@ -27,14 +27,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/viriditycapital/react-webpack-sass-boilerplate.git"
+    "url": "git+https://github.com/mikinty/nyclux.git"
   },
-  "author": "viriditycapital",
+  "author": "mikinty",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/viriditycapital/react-webpack-sass-boilerplate/issues"
+    "url": "https://github.com/mikinty/nyclux/issues"
   },
-  "homepage": "https://github.com/viriditycapital/react-webpack-sass-boilerplate#readme",
+  "homepage": "https://github.com/mikinty/nyclux#readme",
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@babel/node": "^7.13.13",
